@@ -23,6 +23,6 @@ let { data: books, error } = await supabase
             `;
             booksTableBody.appendChild(row);
         
-    let bookList = document.getElementById('books');
-    bookList.innerHTML += `<li>${book.title} ${book.author} ${book.isbn}</li>`;
+    //let bookList = document.getElementById('books');
+    //bookList.innerHTML += `<li>${book.title} ${book.author} ${book.isbn}</li>`;
 }

@@ -13,6 +13,16 @@ let { data: books, error } = await supabase
 
 
   for (let book of books) {
+
+    const booksTableBody = document.getElementById('booksTableBody');
+    const row = document.createElement('tr');
+            row.innerHTML = `
+                <td>${book.title}</td>
+                <td>${book.author}</td>
+                <td>${book.isbn}</td>
+            `;
+            booksTableBody.appendChild(row);
+        
     let bookList = document.getElementById('books');
     bookList.innerHTML += `<li>${book.title} ${book.author} ${book.isbn}</li>`;
 }
